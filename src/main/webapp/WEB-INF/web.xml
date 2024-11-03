@@ -3,7 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
+    <servlet>
+        <servlet-name>TestConnectionServlet</servlet-name>
+        <servlet-class>com.example.ecommercefluxodecaixaalberto_everaldina.servlet.TestConnectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestConnectionServlet</servlet-name>
+        <url-pattern>/testConnection</url-pattern>
+    </servlet-mapping>
 </web-app>
+
