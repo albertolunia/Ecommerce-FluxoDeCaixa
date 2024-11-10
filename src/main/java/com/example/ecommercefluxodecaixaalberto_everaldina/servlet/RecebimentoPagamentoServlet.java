@@ -36,7 +36,7 @@ public class RecebimentoPagamentoServlet extends HttpServlet {
 
         List<RecebimentoPagamento> recebimentosPagamentos = new ArrayList<>();
 
-        String sql = "SELECT * FROM RecebimentoPagamento WHERE MONTH(data) = ? AND YEAR(data) = ?";
+        String sql = "SELECT * FROM recebimento_pagamento WHERE MONTH(data) = ? AND YEAR(data) = ?";
 
 
         Connection connection = null;
@@ -44,9 +44,8 @@ public class RecebimentoPagamentoServlet extends HttpServlet {
         try {
             connection = DatabaseConnection.getConnection();
         } catch ( Exception e ) {
-            response.getWriter().println("Erro ao verificar a conexão: " + e.getMessage());
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            return;
+            response.getWriter().println("Erro ao verificar a conexão: " + e.getMessage());
         }
 
         PreparedStatement stmt = null;
