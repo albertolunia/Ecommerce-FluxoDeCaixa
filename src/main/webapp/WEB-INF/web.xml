@@ -11,5 +11,13 @@
         <servlet-name>TestConnectionServlet</servlet-name>
         <url-pattern>/testConnection</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>RecebimentoPagamentoServlet</servlet-name>
+        <servlet-class>com.example.ecommercefluxodecaixaalberto_everaldina.servlet.RecebimentoPagamentoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecebimentoPagamentoServlet</servlet-name>
+        <url-pattern>/recebimento-pagamento/mes</url-pattern>
+    </servlet-mapping>
 </web-app>
 
