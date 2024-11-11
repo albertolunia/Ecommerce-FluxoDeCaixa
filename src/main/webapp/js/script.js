@@ -157,7 +157,9 @@ async function gerarFluxoCaixa() {
     const ehFuturo = new Date(ano, mes - 1) > new Date();
 
     try {
-        const response = await fetch(`/Ecommerce_FluxoDeCaixa_Alberto_Everaldina_war_exploded/recebimento-pagamento/mes?mes=${mes}&ano=${ano}`);
+        const target = 'Ecommerce_FluxoDeCaixa_Alberto_Everaldina_war_exploded'
+        //const target = 'Ecommerce-FluxoDeCaixa-Alberto_Everaldina-1.0-SNAPSHOT'
+        const response = await fetch(`/${target}/recebimento-pagamento/mes?mes=${mes}&ano=${ano}`);
         console.log(`Status da resposta: ${response.status}`);
         if (!response.ok) {
             throw new Error("Erro ao buscar dados do fluxo de caixa");
